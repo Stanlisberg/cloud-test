@@ -74,7 +74,7 @@ function RenderPage() {
                         <td className="table-data">{user.name}</td>
                         <td className="table-data">{user.username}</td>
                         <td className="table-data">{user.email}</td>
-                        <td className="table-data">{user.phone}</td>
+                        <td className="table-data">{user.phone.slice(0, 12)}</td>
                         <td className="table-data">{user.website}</td>
                       </tr>
                     ))}

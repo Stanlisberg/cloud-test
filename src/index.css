@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #213f7d;
 }
 
 .container {
@@ -35,44 +36,29 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
-  color: black;
+  color:  #213f7d;
   border-radius: 5px;
-  border: 2px solid grey;
+  border: 1px solid #213f7d;
 }
 .input:placeholder {
-  color: black;
-}
-
-.search-icon-div {
-  margin: 25px 0;
-  background: #39cdcc;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  position: absolute;
-  top: 0px;
-  left: 630px;
-  height: 40px;
-  width: 3.5em;
-}
-.search-icon {
-  margin: 12px 20px;
-  cursor: pointer;
+  color:#213f7d;
 }
 
 /*-------Table-----------*/
 .table-wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 990px;
+  max-width: 850px;
   overflow-x: auto;
   padding: 0 5px 0 5px;
+  background: #fbfbfb;
+  border-radius: 5px;
 }
 .table {
   border-collapse: collapse;
   width: 800px;
   margin: 25px auto 14px auto;
-  border: 2px solid rgba(33, 63, 125, 0.1);
-  border-radius: 15px;
+  /* border: 2px solid rgba(33, 63, 125, 0.1); */
 }
 .table-head {
   text-align: justify;
@@ -81,7 +67,7 @@
 
 th {
   font-family: monospace;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .t-body {
@@ -108,7 +94,6 @@ th {
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 5px;
   margin-top: 25px;
   flex-wrap: wrap;
