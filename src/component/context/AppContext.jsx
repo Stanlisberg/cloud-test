@@ -1,32 +1,30 @@
-import { createContext, useState, useEffect} from 'react';
-import axios from 'axios';
+import { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
-
-const  AppContext = createContext()
-export const AppProvider = ({children}) => {
-
+const AppContext = createContext();
+export const AppProvider = ({ children }) => {
   const [users, setUsers] = useState();
 
-
-  const fetchUsers = async() => {
-    const  response = await axios.get('https://jsonplaceholder.typicode.com/users')
-    const data = response.data
+  const fetchUsers = async () => {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
+    const data = response.data;
 
     setUsers(data);
-    console.log(data)
-  }
- 
+    console.log(data);
+  };
 
-  return(
+  return (
     <AppContext.Provider
-     value={{
-      fetchUsers,
-      users
-
-     }}>
+      value={{
+        fetchUsers,
+        users,
+      }}
+    >
       {children}
     </AppContext.Provider>
-  )
-}
+  );
+};
 
 export default AppContext;
