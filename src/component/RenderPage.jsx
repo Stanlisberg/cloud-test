@@ -62,7 +62,7 @@ function RenderPage() {
                       if (searchCoins === "") {
                         return value;
                       } else if (
-                        value.name
+                        value.name && value.username
                           .toLowerCase()
                           .includes(searchCoins.toLowerCase())
                       ) {
@@ -84,11 +84,11 @@ function RenderPage() {
 
           <ReactPaginate
             breakLabel="..."
-            nextLabel={<FaGreaterThan />}
+            nextLabel={<FaGreaterThan size={13} color='grey'/>}
             onPageChange={handlePageClick}
             pageRangeDisplayed={3}
             pageCount={pageCount}
-            previousLabel={<FaLessThan />}
+            previousLabel={<FaLessThan size={13} color='grey' />}
             renderOnZeroPageCount={null}
             containerClassName="pagination"
             pageLinkClassName="page-num"
