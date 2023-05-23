@@ -3,7 +3,6 @@ import AppContext from "./context/AppContext";
 import ReactPaginate from "react-paginate";
 import { FaLessThan } from "react-icons/fa";
 import { FaGreaterThan } from "react-icons/fa";
-import { BiSearch } from "react-icons/bi";
 
 function RenderPage() {
   const { users, fetchUsers } = useContext(AppContext);
@@ -36,20 +35,13 @@ function RenderPage() {
     <>
       <div className="container">
         <div className="wrapper">
-          <div className="input-wrapper">
-            <div>
-              <div className="input-div">
-                <input
-                  type="text"
-                  className="input"
-                  placeholder="Search for anything"
-                  onChange={(e) => setSearchCoins(e.target.value)}
-                />
-              </div>
-              <div className="search-icon-div">
-                <BiSearch color="#ffffff" className="search-icon" />
-              </div>
-            </div>
+          <div className="input-div">
+            <input
+              type="text"
+              className="input"
+              placeholder="Search Users"
+              onChange={(e) => setSearchCoins(e.target.value)}
+            />
           </div>
           <div className="table-wrapper">
             <table className="table">
@@ -106,6 +98,7 @@ function RenderPage() {
           />
         </div>
       </div>
+      ``
     </>
   );
 }

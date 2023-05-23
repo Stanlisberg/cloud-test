@@ -22,45 +22,25 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 100px auto;
 }
 /*--------Seach--------------*/
-.input-wrapper {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-content: center;
-}
-
-.input-div {
-  margin: 25px 0;
-  margin-left: 52px;
-  background: #ffffff;
-  opacity: 0.2;
-  border: 2px solid #213f7d;
-  border-radius: 8px;
-  width: 370px;
-  height: 40px;
-  border-right: none;
-}
-
 .input {
+  display: flex;
+  margin: 25px auto 25px auto;
+  padding: 10px 20px;
   outline: none;
-  width: 98%;
-  height: 100%;
-  border: none;
-  padding: 3px 15px;
+  width: 250px;
+  height: 150%;
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
-  margin-left: 5px;
-  color: #545f7d;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid grey;
 }
 .input:placeholder {
-  color: #545f7d;
+  color: black;
 }
 
 .search-icon-div {
@@ -84,15 +64,13 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 990px;
-  height: auto;
   overflow-x: auto;
-  margin-top: -25px;
-  padding: 0 50px 0 50px;
+  padding: 0 5px 0 5px;
 }
 .table {
-  width: 800px;
   border-collapse: collapse;
-  margin: 25px 25px 14px 25px;
+  width: 800px;
+  margin: 25px auto 14px auto;
   border: 2px solid rgba(33, 63, 125, 0.1);
   border-radius: 15px;
 }
@@ -100,7 +78,10 @@
   text-align: justify;
   border-bottom: 2px solid rgba(33, 63, 125, 0.1);
 }
-.table-row-head {
+
+th {
+  font-family: monospace;
+  font-size: 18px;
 }
 
 .t-body {
@@ -111,7 +92,6 @@
   padding: 150px;
   height: 60px;
   border-width: 1px;
-  /* border-color: pink; */
   border-bottom: 2px solid rgba(33, 63, 125, 0.1);
 }
 .t-row-body:last-child {
@@ -127,9 +107,9 @@
 .pagination {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  margin-right: 55px;
   margin-top: 25px;
   flex-wrap: wrap;
   font-family: "Work Sans";
