@@ -43,52 +43,57 @@ function RenderPage() {
               onChange={(e) => setSearchCoins(e.target.value)}
             />
           </div>
-          <div className="table-wrapper">
-            <table className="table">
-              <thead className="table-head">
-                <tr className="table-row-head">
-                  <th>Name</th>
-                  <th>Username</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Website</th>
-                </tr>
-              </thead>
-              <tbody className="t-body">
-                {currentItems &&
-                  currentItems.length > 0 &&
-                  currentItems
-                    .filter((value) => {
-                      if (searchCoins === "") {
-                        return value;
-                      } else if (
-                        value.name && value.username
-                          .toLowerCase()
-                          .includes(searchCoins.toLowerCase())
-                      ) {
-                        return value;
-                      }
-                    })
-                    .map((user) => (
-                      <tr key={user.id} className="t-row-body">
-                        <td className="table-data">{user.name}</td>
-                        <td className="table-data">{user.username}</td>
-                        <td className="table-data">{user.email}</td>
-                        <td className="table-data">{user.phone.slice(0, 12)}</td>
-                        <td className="table-data">{user.website}</td>
-                      </tr>
-                    ))}
-              </tbody>
-            </table>
+          <div className="table-flex">
+            <div className="table-wrapper">
+              <table className="table">
+                <thead className="table-head">
+                  <tr className="table-row-head">
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                  </tr>
+                </thead>
+                <tbody className="t-body">
+                  {currentItems &&
+                    currentItems.length > 0 &&
+                    currentItems
+                      .filter((value) => {
+                        if (searchCoins === "") {
+                          return value;
+                        } else if (
+                          value.name &&
+                          value.username
+                            .toLowerCase()
+                            .includes(searchCoins.toLowerCase())
+                        ) {
+                          return value;
+                        }
+                      })
+                      .map((user) => (
+                        <tr key={user.id} className="t-row-body">
+                          <td className="table-data">{user.name}</td>
+                          <td className="table-data">{user.username}</td>
+                          <td className="table-data">{user.email}</td>
+                          <td className="table-data">
+                            {user.phone.slice(0, 12)}
+                          </td>
+                          <td className="table-data">{user.website}</td>
+                        </tr>
+                      ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <ReactPaginate
             breakLabel="..."
-            nextLabel={<FaGreaterThan size={13} color='grey'/>}
+            nextLabel={<FaGreaterThan size={13} color="grey" />}
             onPageChange={handlePageClick}
             pageRangeDisplayed={3}
             pageCount={pageCount}
-            previousLabel={<FaLessThan size={13} color='grey' />}
+            previousLabel={<FaLessThan size={13} color="grey" />}
             renderOnZeroPageCount={null}
             containerClassName="pagination"
             pageLinkClassName="page-num"
